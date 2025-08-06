@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -34,37 +38,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-06T21:22:27.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Dockerfile",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Dockerfile",
               "ToolTip": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Dockerfile",
               "RelativeToolTip": "BasicBlog.Platform\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-08-06T19:10:02.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\docker-compose.yml",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\docker-compose.yml",
               "ToolTip": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\docker-compose.yml",
               "RelativeToolTip": "BasicBlog.Platform\\docker-compose.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-08-06T20:13:10.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\appsettings.json",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\appsettings.json",
@@ -77,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Models\\Author.cs",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Models\\Author.cs",
@@ -89,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Program.cs",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Program.cs",
@@ -102,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthorService.cs",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Services\\AuthorService.cs",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Services\\AuthorService.cs",

@@ -13,7 +13,7 @@ builder.Logging.AddConsole();
 //var env = Environment.GetEnvironmentVariable
 IConfiguration config = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.json")
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables()
     .Build();
 
