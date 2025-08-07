@@ -42,4 +42,3 @@ EXPOSE 8080 8081
 
 # Run migrations then start
 ENTRYPOINT ["bash","-lc","dotnet ef database update --no-build --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
-```
