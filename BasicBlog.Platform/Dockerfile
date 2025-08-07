@@ -3,35 +3,33 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-# Copy csproj and restore dependencies
-COPY BasicBlog.Platform.csproj ./
+# Copy csproj & restore
+COPY BasicBlog.Platform/BasicBlog.Platform.csproj ./
 RUN dotnet restore BasicBlog.Platform.csproj
 
-# Copy the rest of the source (Controllers/, Migrations/, etc.) and publish
-COPY . ./
+# Copy all source & publish
+COPY BasicBlog.Platform/. ./
 RUN dotnet publish BasicBlog.Platform.csproj \
     -c $BUILD_CONFIGURATION \
     -o /app/publish \
     /p:UseAppHost=false
 
-# 2) Final image (still SDK so EF CLI is available)
+# 2) Final image (with EF CLI)
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS final
 WORKDIR /app
 
-# Install EF Core CLI globally & symlink it into the PATH
+# Install EF tool
 RUN dotnet tool install --global dotnet-ef --version 8.* \
  && ln -s /root/.dotnet/tools/dotnet-ef /usr/local/bin/dotnet-ef
 
-# Copy the published output
+# Copy published output
 COPY --from=builder /app/publish ./
 
-# Copy project file & Migrations so dotnet-ef can locate your model
-COPY BasicBlog.Platform.csproj ./
-COPY Migrations ./Migrations
+# Copy csproj & Migrations for EF to see
+COPY BasicBlog.Platform/BasicBlog.Platform.csproj ./
+COPY BasicBlog.Platform/Migrations ./Migrations
 
-# Tell Kestrel to listen on 8080 and expose that port
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
-# On container start: apply migrations, then run your app
 ENTRYPOINT ["bash","-lc","dotnet-ef database update --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
