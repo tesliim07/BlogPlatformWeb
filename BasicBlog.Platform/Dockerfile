@@ -25,10 +25,14 @@ RUN dotnet publish BasicBlog.Platform.csproj \
     -o /app/publish \
     /p:UseAppHost=false
 
-# final stage
+# final stage using SDK image so dotnet-ef is available
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS runtime
 WORKDIR /app
 EXPOSE 8080 8081
+
+# Install the EF Core CLI as a global tool
+RUN dotnet tool install --global dotnet-ef --version 8.* \
+    && export PATH="$PATH:/root/.dotnet/tools"
 
 COPY --from=publish /app/publish .
 ENTRYPOINT ["bash", "-lc", "dotnet ef database update --no-build --project /src/BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
