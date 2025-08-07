@@ -22,6 +22,10 @@ WORKDIR /src
 # bring in source and build outputs
 COPY --from=build /src /src
 
+# Install EF Core CLI for the migration step
+RUN dotnet tool install --global dotnet-ef --version 8.* \
+    && export PATH="$PATH:/root/.dotnet/tools"
+
 # Apply EF Core migrations (ensure AZURE_SQL_CONNECTION_STRING env var is set)
 RUN dotnet ef database update --no-build --project BasicBlog.Platform.csproj
 
