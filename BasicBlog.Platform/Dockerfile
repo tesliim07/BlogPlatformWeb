@@ -32,4 +32,4 @@ WORKDIR /app
 EXPOSE 8080 8081
 
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "BasicBlog.Platform.dll"]
+ENTRYPOINT ["bash", "-lc", "dotnet ef database update --no-build --project /src/BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]

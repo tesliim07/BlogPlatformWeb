@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
     environment:
-      - ConnectionStrings__BasicBlogPlatformConnection=Server=.\SQLEXPRESS;Database=BasicBlogPlatformDb;User Id=sa;Password=NewTestingPassword;TrustServerCertificate=True;
+      - ConnectionStrings__BasicBlogPlatformConnection=Server=db,1433;Database=BasicBlogPlatformDb;User Id=sa;Password=Secret$tr0ngP@ssw0rd;TrustServerCertificate=True;
     ports:
       - "8080:80"
 
