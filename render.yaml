@@ -7,17 +7,11 @@ services:
     branch: main
     region: oregon
     dockerfilePath: BasicBlog.Platform/Dockerfile
-    # These commands are ignored for Docker services (build happens via Dockerfile)
-    # but you can still declare them if you switch to Managed .NET later:
-    buildCommand: ""
-    startCommand: ""
-    # Ports your app listens on (make sure your Dockerfile EXPOSEs this port
-    # and your ASP.NET Core app is set to listen on it via ASPNETCORE_URLS)
     ports:
       - 8080
     # Environment variables to inject at runtime:
     envVars:
-      - key: ConnectionStrings__DefaultConnection
+      - key: ConnectionStrings__BasicBlogPlatformConnection
         value: "Server=tcp:blog-sqlsrv.database.windows.net,1433;Initial Catalog=BasicBlogPlatformDb;User ID=Teslim@blog-sqlsrv;Password=Secret$tr0ngP@ssw0rd;Encrypt=True;TrustServerCertificate=False;MultipleActiveResultSets=False"
       - key: ASPNETCORE_ENVIRONMENT
-        value: "Production"
+        value: Production

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "render.yaml",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\render.yaml",
               "RelativeDocumentMoniker": "render.yaml",
@@ -105,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Dockerfile",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Dockerfile",
