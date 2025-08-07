@@ -6,7 +6,7 @@ services:
     plan: free
     branch: main
     region: oregon
-    dockerfilePath: Dockerfile
+    dockerfilePath: BasicBlog.Platform/Dockerfile
     # These commands are ignored for Docker services (build happens via Dockerfile)
     # but you can still declare them if you switch to Managed .NET later:
     buildCommand: ""

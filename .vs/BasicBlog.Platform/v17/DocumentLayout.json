@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -54,13 +54,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "render.yaml",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\render.yaml",
               "RelativeDocumentMoniker": "render.yaml",
               "ToolTip": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\render.yaml",
               "RelativeToolTip": "render.yaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-08-07T20:27:57.097Z",
               "EditorCaption": ""
@@ -111,14 +111,14 @@
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Dockerfile",
               "ToolTip": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Dockerfile",
               "RelativeToolTip": "BasicBlog.Platform\\Dockerfile",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAmwCIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-08-06T19:10:02.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\docker-compose.yml",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\docker-compose.yml",
@@ -131,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\appsettings.json",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\appsettings.json",
