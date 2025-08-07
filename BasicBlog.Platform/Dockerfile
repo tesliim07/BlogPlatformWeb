@@ -1,47 +1,46 @@
+```dockerfile
 # build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
-
 WORKDIR /src
 
-# 1) Copy project file and restore dependencies
+# Copy project and restore
 COPY BasicBlog.Platform.csproj ./
 RUN dotnet restore BasicBlog.Platform.csproj
 
-# 2) Copy source and build
+# Copy source and build
 COPY . ./
-RUN dotnet build BasicBlog.Platform.csproj \
-    -c $BUILD_CONFIGURATION \
-    -o /app/build
+RUN dotnet build BasicBlog.Platform.csproj -c $BUILD_CONFIGURATION -o /app/build
 
-# publish stage with migrations
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS publish
+# publish stage
+FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-# bring in source and build outputs
-COPY --from=build /src /src
-
-# Install EF Core CLI for the migration step
-RUN dotnet tool install --global dotnet-ef --version 8.* \
-    && export PATH="$PATH:/root/.dotnet/tools"
-
-# Apply EF Core migrations (ensure AZURE_SQL_CONNECTION_STRING env var is set)
-RUN dotnet ef database update --no-build --project BasicBlog.Platform.csproj
-
-# Publish the application
+# Publish app
 RUN dotnet publish BasicBlog.Platform.csproj \
     -c $BUILD_CONFIGURATION \
     -o /app/publish \
     /p:UseAppHost=false
 
-# final runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# final stage: SDK image for migrations
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS final
 WORKDIR /app
-EXPOSE 8080 8081
+
+# Install EF CLI
+RUN dotnet tool install --global dotnet-ef --version 8.* \
+    && export PATH="$PATH:/root/.dotnet/tools"
+ENV PATH="$PATH:/root/.dotnet/tools"
 
 # Copy published output
-COPY --from=publish /app/publish .
+COPY --from=publish /app/publish ./
 
-# Start the application
-ENTRYPOINT ["dotnet", "BasicBlog.Platform.dll"]
+# Copy EF project files for migrations
+COPY BasicBlog.Platform.csproj ./
+COPY Migrations ./Migrations
+
+EXPOSE 8080 8081
+
+# Run migrations then start
+ENTRYPOINT ["bash","-lc","dotnet ef database update --no-build --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
+```
