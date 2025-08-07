@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -11,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\controllers\\authorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|c:\\users\\hassan teslim\\source\\repos\\basicblog.platform\\basicblog.platform\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AD0965D-7D23-4DF1-BD08-DAB5E18B480D}|BasicBlog.Platform\\BasicBlog.Platform.csproj|solutionrelative:basicblog.platform\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,24 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AuthorController.cs",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Controllers\\AuthorController.cs",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Controllers\\AuthorController.cs",
               "ToolTip": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Controllers\\AuthorController.cs",
               "RelativeToolTip": "BasicBlog.Platform\\Controllers\\AuthorController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T23:51:43.325Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Dockerfile",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Dockerfile",
@@ -85,20 +85,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\docker-compose.yml",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\docker-compose.yml",
               "ToolTip": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\docker-compose.yml",
               "RelativeToolTip": "BasicBlog.Platform\\docker-compose.yml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-08-06T20:13:10.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\appsettings.json",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\appsettings.json",
@@ -111,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Models\\Author.cs",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Models\\Author.cs",
@@ -119,11 +119,12 @@
               "RelativeToolTip": "BasicBlog.Platform\\Models\\Author.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T23:07:38.391Z"
+              "WhenOpened": "2025-08-01T23:07:38.391Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Program.cs",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Program.cs",
@@ -136,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AuthorService.cs",
               "DocumentMoniker": "C:\\Users\\HASSAN TESLIM\\source\\repos\\BasicBlog.Platform\\BasicBlog.Platform\\Services\\AuthorService.cs",
               "RelativeDocumentMoniker": "BasicBlog.Platform\\Services\\AuthorService.cs",
