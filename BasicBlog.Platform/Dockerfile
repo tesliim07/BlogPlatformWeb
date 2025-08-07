@@ -1,45 +1,35 @@
-# 1) Build + restore
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# 1) Build + Publish (SDK image)
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS publish
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-# Copy the csproj & restore dependencies
+# Copy project + restore + build + publish
 COPY BasicBlog.Platform.csproj ./
 RUN dotnet restore BasicBlog.Platform.csproj
 
-# Copy all source files & compile
 COPY . ./
-RUN dotnet build BasicBlog.Platform.csproj \
-    -c $BUILD_CONFIGURATION \
-    -o /app/build
-
-# 2) Publish stage
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-
-# Publish into a self-contained folder
 RUN dotnet publish BasicBlog.Platform.csproj \
     -c $BUILD_CONFIGURATION \
     -o /app/publish \
     /p:UseAppHost=false
 
-# 3) Runtime + migrations (using SDK so EF CLI is available)
+# 2) Runtime + Migrations (SDK image again for EF CLI)
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS final
 WORKDIR /app
 
-# Install the EF Core CLI and symlink into PATH
+# Install EF Core CLI and symlink it into a PATH directory
 RUN dotnet tool install --global dotnet-ef --version 8.* \
  && ln -s /root/.dotnet/tools/dotnet-ef /usr/local/bin/dotnet-ef
 
-# Copy only your published binaries
-COPY --from=publish /app/publish ./
+# Copy the published output
+COPY --from=publish /app/publish .
 
-# Copy the csproj & Migrations so the EF tool can discover your model
-COPY BasicBlog.Platform.csproj ./
+# Copy the csproj + Migrations so dotnet-ef can find your model
+COPY BasicBlog.Platform.csproj .
 COPY Migrations ./Migrations
 
-EXPOSE 8080
+EXPOSE 8080 8081
 
-# At container start: run migrations, then launch your app
+# On container start: run migrations (picks up AZURE_SQL_CONNECTION_STRING env-var)
+# then start the app
 ENTRYPOINT ["bash","-lc","dotnet-ef database update --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
