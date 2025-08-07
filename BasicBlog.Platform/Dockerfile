@@ -1,39 +1,21 @@
-# build stage
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-
+# publish stage (still running on the SDK image)
+FROM build AS publish
 WORKDIR /src
 
-# 1) Copy just the .csproj
-COPY BasicBlog.Platform.csproj ./
+# apply EF Core migrations here (env-var for prod connection string must be available in build)
+RUN dotnet ef database update --no-build --project BasicBlog.Platform.csproj
 
-# 2) Restore
-RUN dotnet restore BasicBlog.Platform.csproj
-
-# 3) Copy all source files
-COPY . .
-
-# 4) Build using the csproj in /src
-RUN dotnet build BasicBlog.Platform.csproj \
-    -c $BUILD_CONFIGURATION \
-    -o /app/build
-
-# publish stage
-FROM build AS publish
+# then publish
 RUN dotnet publish BasicBlog.Platform.csproj \
     -c $BUILD_CONFIGURATION \
     -o /app/publish \
     /p:UseAppHost=false
 
-# final stage using SDK image so dotnet-ef is available
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS runtime
+# final stage: runtime-only image, no CLI needed
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 EXPOSE 8080 8081
 
-# Install the EF Core CLI as a global tool
-RUN dotnet tool install --global dotnet-ef --version 8.* \
-    && echo "ENV PATH="$PATH:/root/.dotnet/tools"" >> /etc/dotnet-cli-tools.env
-ENV PATH="${PATH}:/root/.dotnet/tools"
-
 COPY --from=publish /app/publish .
-ENTRYPOINT ["bash", "-lc", "/root/.dotnet/tools/dotnet-ef database update --no-build --project /src/BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
+ENTRYPOINT ["dotnet", "BasicBlog.Platform.dll"]
+
