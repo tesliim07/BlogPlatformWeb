@@ -32,7 +32,8 @@ EXPOSE 8080 8081
 
 # Install the EF Core CLI as a global tool
 RUN dotnet tool install --global dotnet-ef --version 8.* \
-    && export PATH="$PATH:/root/.dotnet/tools"
+    && echo "ENV PATH="$PATH:/root/.dotnet/tools"" >> /etc/dotnet-cli-tools.env
+ENV PATH="${PATH}:/root/.dotnet/tools"
 
 COPY --from=publish /app/publish .
-ENTRYPOINT ["bash", "-lc", "dotnet ef database update --no-build --project /src/BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
+ENTRYPOINT ["bash", "-lc", "/root/.dotnet/tools/dotnet-ef database update --no-build --project /src/BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
