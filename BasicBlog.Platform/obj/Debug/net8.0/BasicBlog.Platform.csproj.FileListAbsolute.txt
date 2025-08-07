@@ -169,3 +169,4 @@ C:\Users\HASSAN TESLIM\source\repos\BasicBlog.Platform\BasicBlog.Platform\obj\De
 C:\Users\HASSAN TESLIM\source\repos\BasicBlog.Platform\BasicBlog.Platform\obj\Debug\net8.0\BasicBlog.Platform.pdb
 C:\Users\HASSAN TESLIM\source\repos\BasicBlog.Platform\BasicBlog.Platform\obj\Debug\net8.0\BasicBlog.Platform.genruntimeconfig.cache
 C:\Users\HASSAN TESLIM\source\repos\BasicBlog.Platform\BasicBlog.Platform\obj\Debug\net8.0\ref\BasicBlog.Platform.dll
+C:\Users\HASSAN TESLIM\source\repos\BasicBlog.Platform\BasicBlog.Platform\obj\Debug\net8.0\BasicBlog.Platform.sourcelink.json
