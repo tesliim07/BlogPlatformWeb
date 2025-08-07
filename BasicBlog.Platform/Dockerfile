@@ -1,48 +1,42 @@
-# build stage
+# 1) Build + Restore
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-# Copy project and restore
+# Copy csproj and restore
 COPY BasicBlog.Platform.csproj ./
 RUN dotnet restore BasicBlog.Platform.csproj
 
-# Copy source and build
+# Copy everything and do a build
 COPY . ./
-RUN dotnet build BasicBlog.Platform.csproj -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build BasicBlog.Platform.csproj \
+    -c $BUILD_CONFIGURATION \
+    -o /app/build
 
-# publish stage
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS publish
+# 2) Migration + Publish
+FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-# Copy source and build outputs
-COPY --from=build /src /src
+# At this point /src still has your .csproj, obj/, and Migrations/
+# Apply EF migrations (ensure your AZURE_SQL_CONNECTION_STRING env var is set)
+RUN dotnet tool install --global dotnet-ef --version 8.* \
+ && export PATH="$PATH:/root/.dotnet/tools" \
+ && dotnet ef database update --no-build --project BasicBlog.Platform.csproj
 
-# Publish app
+# Now publish to a clean folder
 RUN dotnet publish BasicBlog.Platform.csproj \
     -c $BUILD_CONFIGURATION \
     -o /app/publish \
     /p:UseAppHost=false
 
-# final stage: SDK image for migrations and runtime
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS final
+# 3) Runtime-only image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-
-# Install EF Core CLI as global tool
-RUN dotnet tool install --global dotnet-ef --version 8.*
-
-# Add the global tools path
-ENV PATH="/root/.dotnet/tools:${PATH}"
-
-# Copy published output
-COPY --from=publish /app/publish ./
-
-# Copy EF project & migrations so dotnet-ef can locate context
-COPY BasicBlog.Platform.csproj ./
-COPY Migrations ./Migrations
-
 EXPOSE 8080 8081
 
-# Run migrations using the global tool 'dotnet-ef', then start the app
-ENTRYPOINT ["bash", "-lc", "/root/.dotnet/tools/dotnet-ef database update --no-build --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
+# Copy over only the published output
+COPY --from=publish /app/publish .
+
+# Start the app (no EF step here)
+ENTRYPOINT ["dotnet", "BasicBlog.Platform.dll"]
