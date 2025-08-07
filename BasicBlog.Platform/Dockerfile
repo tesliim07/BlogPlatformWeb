@@ -26,8 +26,7 @@ RUN dotnet publish BasicBlog.Platform.csproj \
     /p:UseAppHost=false
 
 # final stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS runtime
 WORKDIR /app
 EXPOSE 8080 8081
 
