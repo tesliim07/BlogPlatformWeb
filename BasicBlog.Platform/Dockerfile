@@ -45,4 +45,4 @@ COPY Migrations ./Migrations
 EXPOSE 8080 8081
 
 # Run migrations using the global tool 'dotnet-ef', then start the app
-ENTRYPOINT ["bash", "-lc", "dotnet-ef database update --no-build --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
+ENTRYPOINT ["bash", "-lc", "/root/.dotnet/tools/dotnet-ef database update --no-build --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
