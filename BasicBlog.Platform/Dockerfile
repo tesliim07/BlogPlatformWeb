@@ -1,4 +1,3 @@
-```dockerfile
 # build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
@@ -47,4 +46,3 @@ EXPOSE 8080 8081
 
 # Run migrations using the global tool 'dotnet-ef', then start the app
 ENTRYPOINT ["bash", "-lc", "dotnet-ef database update --no-build --project BasicBlog.Platform.csproj && exec dotnet BasicBlog.Platform.dll"]
-```
