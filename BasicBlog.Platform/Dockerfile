@@ -25,8 +25,9 @@ RUN dotnet tool install --global dotnet-ef --version 8.* \
 COPY --from=publish /app/publish .
 
 # Copy the csproj + Migrations so dotnet-ef can find your model
-COPY BasicBlog.Platform.csproj .
-COPY Migrations ./Migrations
+COPY BasicBlog.Platform/BasicBlog.Platform.csproj ./
+COPY BasicBlog.Platform/Migrations ./Migrations
+
 
 EXPOSE 8080 8081
 
